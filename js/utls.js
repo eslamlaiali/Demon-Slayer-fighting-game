@@ -18,9 +18,9 @@ function determinWinner({ player, enmy, timerId }) {
     document.querySelector("#resultOfGame").innerHTML = "Tie";
   } else if (player.health > enmy.health) {
     // enmy.switchSprite("death");
-    document.querySelector("#resultOfGame").innerHTML = "Player 1 Wins";
+    document.querySelector("#resultOfGame").innerHTML = `Player 1  Wins <img src="${player.sprites.idle.imgSrc}" style="width:100px">`;
   } else if (player.health < enmy.health) {
-    document.querySelector("#resultOfGame").innerHTML = "Player 2 Wins";
+    document.querySelector("#resultOfGame").innerHTML = `Player 2 Wins <img src="${enmy.sprites.idle.imgSrc}" style="width:200px">`;
   }
 }
 let timer = 51;
